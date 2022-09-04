@@ -15,6 +15,7 @@
                   (click)="increment()">
         Increment
       </mwc-button>
+      <counter-button [counter]="count$ | async" *axLazyElement="'http://localhost:9080/main.js'; loadingTemplate: loading; errorTemplate: error; module: false"></counter-button>
       <br>
       <br>
       <p>{{ 'anms.examples.elements.counter' | translate }}: {{count$ | async}}</p>
